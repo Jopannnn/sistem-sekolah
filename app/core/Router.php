@@ -12,10 +12,24 @@ public function run()
 
     if ($method === 'GET' && $uri == '/students')
         {
-            echo '<h1>Daftar Siswa</h1>';
 
-            echo '<p>Menampilkan daftar siswa.</p>';
 
+            require_once './app/controllers/studentController.php';
+
+            $controller = new \App\Controllers\studentsController();
+            $controller->index();
+            return;
+        }
+
+    
+    if ($method === 'GET' && $uri == '/students/create')
+        {
+            
+            require_once './app/controllers/studentController.php';
+
+            $controller = new \App\Controllers\studentsController();
+            $controller->create();
+           
             return;
         }
 
