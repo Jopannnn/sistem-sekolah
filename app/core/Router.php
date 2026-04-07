@@ -40,7 +40,7 @@ class Router
 
                 require_once '../app/controllers/' . $route['controller'] . '.php';
 
-                $controllerClass = '\\App\\Controllers\\' . $route['controller'];
+                $controllerClass = '\\App\\Controller\\' . $route['controller'];
                 $controller = new $controllerClass();
 
                 call_user_func_array(
