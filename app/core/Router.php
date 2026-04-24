@@ -21,8 +21,8 @@ class Router
     {
 
         $method = $_SERVER['REQUEST_METHOD'];
-        if ($method === "POST" && isset($_POST['_METHOD'])) {
-            $method = strtoupper($_POST['_METHOD']);
+        if ($method === "POST" && isset($_POST['_method'])) {
+            $method = strtoupper($_POST['_method']);
         }
 
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
